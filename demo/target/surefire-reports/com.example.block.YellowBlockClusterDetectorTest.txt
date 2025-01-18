@@ -1,8 +1,8 @@
 -------------------------------------------------------------------------------
 Test set: com.example.block.YellowBlockClusterDetectorTest
 -------------------------------------------------------------------------------
-Tests run: 3, Failures: 2, Errors: 0, Skipped: 0, Time elapsed: 0.494 s <<< FAILURE! -- in com.example.block.YellowBlockClusterDetectorTest
-com.example.block.YellowBlockClusterDetectorTest.detectYellowBlocks_WithValidImage_ShouldProcessSuccessfully -- Time elapsed: 0.066 s <<< FAILURE!
+Tests run: 3, Failures: 2, Errors: 0, Skipped: 0, Time elapsed: 0.517 s <<< FAILURE! -- in com.example.block.YellowBlockClusterDetectorTest
+com.example.block.YellowBlockClusterDetectorTest.detectYellowBlocks_WithValidImage_ShouldProcessSuccessfully -- Time elapsed: 0.073 s <<< FAILURE!
 java.lang.AssertionError: 
 
 Expecting file:
@@ -79,7 +79,7 @@ to exist.
 	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
 
-com.example.block.YellowBlockClusterDetectorTest.detectYellowBlocks_WithInvalidOutputPath_ShouldThrowException -- Time elapsed: 0.027 s <<< FAILURE!
+com.example.block.YellowBlockClusterDetectorTest.detectYellowBlocks_WithInvalidOutputPath_ShouldThrowException -- Time elapsed: 0.028 s <<< FAILURE!
 org.opentest4j.AssertionFailedError: Expected java.lang.RuntimeException to be thrown, but nothing was thrown.
 	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:152)
 	at org.junit.jupiter.api.AssertThrows.assertThrows(AssertThrows.java:73)
