@@ -64,7 +64,7 @@ public class YellowBlockClusterDetector {
             Mat clusterMask = Mat.zeros(yellowMask.size(), CvType.CV_8UC1);
             Imgproc.drawContours(clusterMask, List.of(contour), -1, new Scalar(255), -1);
 
-            // Split clusters into blocks using refined criteria
+            // Refine splitting using distance transform
             splitClusterIntoBlocks(clusterMask, inputImage, clusterRect);
         }
 
@@ -82,16 +82,27 @@ public class YellowBlockClusterDetector {
     private void splitClusterIntoBlocks(Mat clusterMask, Mat outputImage, Rect clusterRect) {
         Mat subRegionMask = clusterMask.submat(clusterRect);
 
+        // Apply distance transform
+        Mat distTransform = new Mat();
+        Imgproc.distanceTransform(subRegionMask, distTransform, Imgproc.DIST_L2, 5);
+
+        // Normalize the distance transform
+        Core.normalize(distTransform, distTransform, 0, 255, Core.NORM_MINMAX, CvType.CV_8UC1);
+
+        // Threshold the distance transform to separate peaks
+        Mat peaks = new Mat();
+        Imgproc.threshold(distTransform, peaks, 50, 255, Imgproc.THRESH_BINARY);
+
+        // Perform connected components to identify individual blocks
         List<MatOfPoint> blockContours = new ArrayList<>();
         Mat hierarchy = new Mat();
-        Imgproc.findContours(subRegionMask, blockContours, hierarchy, Imgproc.RETR_EXTERNAL, Imgproc.CHAIN_APPROX_SIMPLE);
+        Imgproc.findContours(peaks, blockContours, hierarchy, Imgproc.RETR_EXTERNAL, Imgproc.CHAIN_APPROX_SIMPLE);
 
         for (MatOfPoint blockContour : blockContours) {
             double blockArea = Imgproc.contourArea(blockContour);
             if (blockArea < MIN_BLOCK_AREA) continue;
 
             Rect blockRect = Imgproc.boundingRect(blockContour);
-            System.out.println("Detected block at: " + blockRect);
 
             // Adjust coordinates relative to the original image
             Rect absoluteBlockRect = new Rect(
@@ -102,6 +113,7 @@ public class YellowBlockClusterDetector {
             );
 
             Imgproc.rectangle(outputImage, absoluteBlockRect, new Scalar(0, 255, 0), 2);
+            System.out.println("Detected block at: " + absoluteBlockRect);
         }
     }
 }

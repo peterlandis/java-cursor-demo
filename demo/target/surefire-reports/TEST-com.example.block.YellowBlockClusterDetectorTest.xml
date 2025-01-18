@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="com.example.block.YellowBlockClusterDetectorTest" time="0.517" tests="3" errors="0" skipped="0" failures="2">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="com.example.block.YellowBlockClusterDetectorTest" time="0.49" tests="3" errors="0" skipped="0" failures="2">
   <properties>
     <property name="java.specification.version" value="23"/>
     <property name="sun.jnu.encoding" value="UTF-8"/>
@@ -12,7 +12,7 @@
     <property name="user.country" value="US"/>
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="sun.boot.library.path" value="/Users/peterlandis/Development/java/OpenJDK-23.jdk/Contents/Home/lib"/>
-    <property name="sun.java.command" value="/Users/peterlandis/Development/java_projects/demo/target/surefire/surefirebooter-20250118173958710_3.jar /Users/peterlandis/Development/java_projects/demo/target/surefire 2025-01-18T17-39-58_675-jvmRun1 surefire-20250118173958710_1tmp surefire_0-20250118173958710_2tmp"/>
+    <property name="sun.java.command" value="/Users/peterlandis/Development/java_projects/demo/target/surefire/surefirebooter-20250118174730482_3.jar /Users/peterlandis/Development/java_projects/demo/target/surefire 2025-01-18T17-47-30_446-jvmRun1 surefire-20250118174730482_1tmp surefire_0-20250118174730482_2tmp"/>
     <property name="http.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
     <property name="jdk.debug" value="release"/>
     <property name="test" value="com.example.block.YellowBlockClusterDetectorTest"/>
@@ -30,7 +30,7 @@
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
     <property name="apple.awt.application.name" value="ForkedBooter"/>
-    <property name="surefire.real.class.path" value="/Users/peterlandis/Development/java_projects/demo/target/surefire/surefirebooter-20250118173958710_3.jar"/>
+    <property name="surefire.real.class.path" value="/Users/peterlandis/Development/java_projects/demo/target/surefire/surefirebooter-20250118174730482_3.jar"/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
     <property name="ftp.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
     <property name="java.runtime.version" value="23.0.1+11-39"/>
@@ -59,7 +59,7 @@
     <property name="socksNonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
     <property name="java.class.version" value="67.0"/>
   </properties>
-  <testcase name="detectYellowBlocks_WithValidImage_ShouldProcessSuccessfully" classname="com.example.block.YellowBlockClusterDetectorTest" time="0.073">
+  <testcase name="detectYellowBlocks_WithValidImage_ShouldProcessSuccessfully" classname="com.example.block.YellowBlockClusterDetectorTest" time="0.057">
     <failure message="&#10;Expecting file:&#10;  /Users/peterlandis/Development/java_projects/demo/target/test-classes/block_cluster.jpeg/output.jpg&#10;to exist." type="java.lang.AssertionError"><![CDATA[java.lang.AssertionError: 
 
 Expecting file:
@@ -138,61 +138,73 @@ to exist.
 ]]></failure>
     <system-out><![CDATA[/Users/peterlandis/Development/java_projects/demo/target/test-classes/block_cluster.jpeg/output.jpg
 Detected yellow cluster at: {854, 1322, 168x69}
-Detected block at: {0, 0, 168x69}
+Detected block at: {854, 1322, 161x63}
 Detected yellow cluster at: {342, 988, 169x248}
-Detected block at: {0, 0, 169x248}
+Detected block at: {348, 1095, 134x135}
+Detected block at: {376, 1013, 116x86}
 Detected yellow cluster at: {1081, 948, 71x151}
-Detected block at: {0, 0, 71x151}
+Detected block at: {1086, 969, 66x130}
+Detected block at: {1135, 953, 17x55}
 Detected yellow cluster at: {0, 858, 41x68}
-Detected block at: {0, 0, 41x68}
+Detected block at: {0, 858, 38x68}
 Detected yellow cluster at: {714, 834, 148x130}
-Detected block at: {0, 0, 148x130}
+Detected block at: {721, 841, 134x116}
 Detected yellow cluster at: {527, 824, 132x138}
-Detected block at: {0, 0, 132x138}
+Detected block at: {533, 829, 120x127}
 Detected yellow cluster at: {911, 770, 69x141}
-Detected block at: {0, 0, 69x141}
+Detected block at: {931, 780, 49x131}
+Detected block at: {914, 770, 20x130}
 Detected yellow cluster at: {1002, 755, 140x73}
-Detected block at: {0, 0, 140x73}
+Detected block at: {1002, 755, 134x73}
 Detected yellow cluster at: {628, 707, 213x135}
-Detected block at: {0, 0, 213x135}
+Detected block at: {736, 745, 92x60}
+Detected block at: {633, 717, 107x120}
 Detected yellow cluster at: {471, 686, 76x141}
-Detected block at: {0, 0, 76x141}
+Detected block at: {471, 686, 76x135}
 Detected yellow cluster at: {1073, 662, 79x29}
-Detected block at: {0, 0, 79x29}
+Detected block at: {1073, 662, 79x29}
 Detected yellow cluster at: {600, 608, 65x92}
-Detected block at: {0, 0, 65x92}
+Detected block at: {600, 608, 65x92}
 Detected yellow cluster at: {1088, 603, 64x66}
-Detected block at: {0, 0, 64x66}
+Detected block at: {1088, 608, 64x56}
 Detected yellow cluster at: {708, 586, 77x92}
-Detected block at: {0, 0, 77x92}
+Detected block at: {708, 606, 29x58}
+Detected block at: {743, 586, 42x92}
 Detected yellow cluster at: {631, 580, 77x122}
-Detected block at: {0, 0, 77x122}
+Detected block at: {631, 597, 77x102}
 Detected yellow cluster at: {696, 530, 52x110}
-Detected block at: {0, 0, 52x110}
+Detected block at: {696, 530, 52x110}
 Detected yellow cluster at: {0, 521, 138x123}
-Detected block at: {0, 0, 138x123}
+Detected block at: {0, 526, 130x111}
 Detected yellow cluster at: {912, 498, 136x191}
-Detected block at: {0, 0, 136x191}
+Detected block at: {999, 564, 43x104}
+Detected block at: {918, 502, 122x161}
 Detected yellow cluster at: {190, 495, 212x190}
-Detected block at: {0, 0, 212x190}
+Detected block at: {268, 607, 127x72}
+Detected block at: {246, 525, 18x83}
+Detected block at: {196, 508, 23x109}
 Detected yellow cluster at: {1044, 429, 80x121}
-Detected block at: {0, 0, 80x121}
+Detected block at: {1044, 436, 73x106}
 Detected yellow cluster at: {100, 425, 100x123}
-Detected block at: {0, 0, 100x123}
+Detected block at: {106, 430, 85x113}
 Detected yellow cluster at: {1128, 396, 24x112}
-Detected block at: {0, 0, 24x112}
+Detected block at: {1128, 396, 24x112}
 Detected yellow cluster at: {404, 396, 182x292}
-Detected block at: {0, 0, 182x292}
+Detected block at: {414, 571, 116x106}
+Detected block at: {439, 533, 93x23}
+Detected block at: {454, 406, 122x100}
 Detected yellow cluster at: {357, 341, 132x92}
-Detected block at: {0, 0, 132x92}
+Detected block at: {364, 346, 125x79}
 Detected yellow cluster at: {67, 323, 140x83}
-Detected block at: {0, 0, 140x83}
+Detected block at: {67, 329, 130x69}
 Detected yellow cluster at: {686, 293, 164x224}
-Detected block at: {0, 0, 164x224}
+Detected block at: {706, 481, 17x22}
+Detected block at: {696, 427, 41x43}
+Detected block at: {728, 300, 115x110}
 Annotated image saved at: /Users/peterlandis/Development/java_projects/demo/target/test-classes/block_cluster.jpeg/output.jpg
 ]]></system-out>
   </testcase>
-  <testcase name="detectYellowBlocks_WithInvalidOutputPath_ShouldThrowException" classname="com.example.block.YellowBlockClusterDetectorTest" time="0.028">
+  <testcase name="detectYellowBlocks_WithInvalidOutputPath_ShouldThrowException" classname="com.example.block.YellowBlockClusterDetectorTest" time="0.025">
     <failure message="Expected java.lang.RuntimeException to be thrown, but nothing was thrown." type="org.opentest4j.AssertionFailedError"><![CDATA[org.opentest4j.AssertionFailedError: Expected java.lang.RuntimeException to be thrown, but nothing was thrown.
 	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:152)
 	at org.junit.jupiter.api.AssertThrows.assertThrows(AssertThrows.java:73)
@@ -270,57 +282,69 @@ Annotated image saved at: /Users/peterlandis/Development/java_projects/demo/targ
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
 ]]></failure>
     <system-out><![CDATA[Detected yellow cluster at: {854, 1322, 168x69}
-Detected block at: {0, 0, 168x69}
+Detected block at: {854, 1322, 161x63}
 Detected yellow cluster at: {342, 988, 169x248}
-Detected block at: {0, 0, 169x248}
+Detected block at: {348, 1095, 134x135}
+Detected block at: {376, 1013, 116x86}
 Detected yellow cluster at: {1081, 948, 71x151}
-Detected block at: {0, 0, 71x151}
+Detected block at: {1086, 969, 66x130}
+Detected block at: {1135, 953, 17x55}
 Detected yellow cluster at: {0, 858, 41x68}
-Detected block at: {0, 0, 41x68}
+Detected block at: {0, 858, 38x68}
 Detected yellow cluster at: {714, 834, 148x130}
-Detected block at: {0, 0, 148x130}
+Detected block at: {721, 841, 134x116}
 Detected yellow cluster at: {527, 824, 132x138}
-Detected block at: {0, 0, 132x138}
+Detected block at: {533, 829, 120x127}
 Detected yellow cluster at: {911, 770, 69x141}
-Detected block at: {0, 0, 69x141}
+Detected block at: {931, 780, 49x131}
+Detected block at: {914, 770, 20x130}
 Detected yellow cluster at: {1002, 755, 140x73}
-Detected block at: {0, 0, 140x73}
+Detected block at: {1002, 755, 134x73}
 Detected yellow cluster at: {628, 707, 213x135}
-Detected block at: {0, 0, 213x135}
+Detected block at: {736, 745, 92x60}
+Detected block at: {633, 717, 107x120}
 Detected yellow cluster at: {471, 686, 76x141}
-Detected block at: {0, 0, 76x141}
+Detected block at: {471, 686, 76x135}
 Detected yellow cluster at: {1073, 662, 79x29}
-Detected block at: {0, 0, 79x29}
+Detected block at: {1073, 662, 79x29}
 Detected yellow cluster at: {600, 608, 65x92}
-Detected block at: {0, 0, 65x92}
+Detected block at: {600, 608, 65x92}
 Detected yellow cluster at: {1088, 603, 64x66}
-Detected block at: {0, 0, 64x66}
+Detected block at: {1088, 608, 64x56}
 Detected yellow cluster at: {708, 586, 77x92}
-Detected block at: {0, 0, 77x92}
+Detected block at: {708, 606, 29x58}
+Detected block at: {743, 586, 42x92}
 Detected yellow cluster at: {631, 580, 77x122}
-Detected block at: {0, 0, 77x122}
+Detected block at: {631, 597, 77x102}
 Detected yellow cluster at: {696, 530, 52x110}
-Detected block at: {0, 0, 52x110}
+Detected block at: {696, 530, 52x110}
 Detected yellow cluster at: {0, 521, 138x123}
-Detected block at: {0, 0, 138x123}
+Detected block at: {0, 526, 130x111}
 Detected yellow cluster at: {912, 498, 136x191}
-Detected block at: {0, 0, 136x191}
+Detected block at: {999, 564, 43x104}
+Detected block at: {918, 502, 122x161}
 Detected yellow cluster at: {190, 495, 212x190}
-Detected block at: {0, 0, 212x190}
+Detected block at: {268, 607, 127x72}
+Detected block at: {246, 525, 18x83}
+Detected block at: {196, 508, 23x109}
 Detected yellow cluster at: {1044, 429, 80x121}
-Detected block at: {0, 0, 80x121}
+Detected block at: {1044, 436, 73x106}
 Detected yellow cluster at: {100, 425, 100x123}
-Detected block at: {0, 0, 100x123}
+Detected block at: {106, 430, 85x113}
 Detected yellow cluster at: {1128, 396, 24x112}
-Detected block at: {0, 0, 24x112}
+Detected block at: {1128, 396, 24x112}
 Detected yellow cluster at: {404, 396, 182x292}
-Detected block at: {0, 0, 182x292}
+Detected block at: {414, 571, 116x106}
+Detected block at: {439, 533, 93x23}
+Detected block at: {454, 406, 122x100}
 Detected yellow cluster at: {357, 341, 132x92}
-Detected block at: {0, 0, 132x92}
+Detected block at: {364, 346, 125x79}
 Detected yellow cluster at: {67, 323, 140x83}
-Detected block at: {0, 0, 140x83}
+Detected block at: {67, 329, 130x69}
 Detected yellow cluster at: {686, 293, 164x224}
-Detected block at: {0, 0, 164x224}
+Detected block at: {706, 481, 17x22}
+Detected block at: {696, 427, 41x43}
+Detected block at: {728, 300, 115x110}
 Annotated image saved at: /Users/peterlandis/Development/java_projects/demo/src/test/resources/output.jpg
 ]]></system-out>
   </testcase>
